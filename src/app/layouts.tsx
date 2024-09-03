@@ -1,7 +1,5 @@
 import type { Metadata } from "next"
 import localfont from 'next/font/local'
-import '@/src/assets/styles/globals.scss'
-import SEO from "./seo"
 
 export const metadata: Metadata = {
    title: 'Portfolio Nunu',
@@ -42,21 +40,3 @@ export const font = localfont({
       },
    ]
 })
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <link rel="icon" href="/favicon.ico" sizes="any" />
-      <SEO/>
-      <body className={font.className}>
-        <main>
-          {children}
-        </main>
-      </body>
-    </html>
-  )
-}
